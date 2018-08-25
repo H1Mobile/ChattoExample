@@ -73,7 +73,10 @@ class ChatExamplesViewController: CellsViewController {
     
     private func makeSirenaCellItem() -> CellItem {
         return CellItem(title: "Sirena", action: { [weak self] in
-            let items = [TimeSeparatorModel(uid: "AAAA", date: Date().toWeekDayAndDateString())]
+            
+            let timeSeparatorItem = TimeSeparatorModel(uid: "AAAA", date: Date().toWeekDayAndDateString())
+            let notesItem = NotesModel(uid: "BBBB", text: "Dijo que iba a consultar con su esposa antes de decidir que modelo comprarían, quedé en llamarlo a la noche para que me confirme.", date: Date().toWeekDayAndDateString())
+            let items = [notesItem]
             let dataSource = SirenaChatDataSource(items: items, pageSize: 50)
             let viewController = SirenaChatViewController()
             viewController.dataSource = dataSource

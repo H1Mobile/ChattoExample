@@ -35,6 +35,7 @@ class SirenaChatViewController: BaseChatViewController {
     }
     
     func createChatInputItems() -> [ChatInputItemProtocol] {
+        // Por cada tipo de item de input hay que crear una clase que cumple con el protocolo de ChatInputItemProtocol
         var items = [ChatInputItemProtocol]()
         items.append(self.createTextInputItem())
         items.append(self.createPhotoInputItem())
