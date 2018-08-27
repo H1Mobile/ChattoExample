@@ -36,11 +36,12 @@ class NotesPresenter: ChatItemPresenterProtocol {
     private static let cellReuseIdentifier = NotesCollectionViewCell.self.description()
     
     static func registerCells(_ collectionView: UICollectionView) {
-        collectionView.register(NotesCollectionViewCell.self, forCellWithReuseIdentifier: cellReuseIdentifier)
+        collectionView.register(UINib(nibName: "NotesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "NotesCollectionViewCell")
     }
     
     func dequeueCell(collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
-        return collectionView.dequeueReusableCell(withReuseIdentifier: NotesPresenter.cellReuseIdentifier, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NotesCollectionViewCell", for: indexPath)
+        return cell
     }
     
     func configureCell(_ cell: UICollectionViewCell, decorationAttributes: ChatItemDecorationAttributesProtocol?) {
@@ -58,6 +59,7 @@ class NotesPresenter: ChatItemPresenterProtocol {
     }
     
     func heightForCell(maximumWidth width: CGFloat, decorationAttributes: ChatItemDecorationAttributesProtocol?) -> CGFloat {
-        return 24
+        // TODO : ver como calcular el height automágicamente
+        return 120
     }
 }

@@ -22,6 +22,9 @@ class SirenaChatViewController: BaseChatViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "Sirena"
+        
     }
     
     override func createChatInputView() -> UIView {
@@ -63,7 +66,8 @@ class SirenaChatViewController: BaseChatViewController {
         
         return [
             SendingStatusModel.chatItemType: [SendingStatusPresenterBuilder()],
-            TimeSeparatorModel.chatItemType: [TimeSeparatorPresenterBuilder()]
+            TimeSeparatorModel.chatItemType: [TimeSeparatorPresenterBuilder()],
+            NotesModel.chatItemType: [NotesPresenterBuilder()]
         ]
     }
 }

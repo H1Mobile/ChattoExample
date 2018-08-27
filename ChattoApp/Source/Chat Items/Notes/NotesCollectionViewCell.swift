@@ -13,6 +13,7 @@ class NotesCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var textLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var noteIconImage: UIImageView!
+    @IBOutlet weak var noteContainerView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,16 +23,18 @@ class NotesCollectionViewCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.commonInit()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.commonInit()
     }
     
     private func commonInit() {
-        self.noteIconImage.tintColor = UIColor.yellow
+        let tintColor = UIColor(hexString: "ffc107")
+        noteIconImage.image = noteIconImage.image?.tinted(with: tintColor)
+        
+        noteContainerView.layer.borderWidth = 1
+        noteContainerView.layer.borderColor = tintColor.cgColor
     }
     
     var text: String = "" {

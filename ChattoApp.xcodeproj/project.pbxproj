@@ -13,6 +13,8 @@
 		04B6F929213195DD00639A1B /* NotesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B6F928213195DD00639A1B /* NotesPresenter.swift */; };
 		04B6F92C2131980300639A1B /* NotesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B6F92A2131980300639A1B /* NotesCollectionViewCell.swift */; };
 		04B6F92D2131980300639A1B /* NotesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B6F92B2131980300639A1B /* NotesCollectionViewCell.xib */; };
+		04B6F93321339F5000639A1B /* UIImage+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B6F93221339F5000639A1B /* UIImage+Utils.swift */; };
+		04B6F9352133A23100639A1B /* UIColors+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B6F9342133A23100639A1B /* UIColors+Utils.swift */; };
 		0997CD2F2042E42100D7BDF9 /* CellsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0997CD2E2042E42100D7BDF9 /* CellsViewController.swift */; };
 		0997CD312042E58400D7BDF9 /* ChatWithTabBarExamplesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0997CD302042E58400D7BDF9 /* ChatWithTabBarExamplesViewController.swift */; };
 		5587302E1FCD7EE5005BC2EC /* MessagesSelectionChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5587302D1FCD7EE5005BC2EC /* MessagesSelectionChatViewController.swift */; };
@@ -77,6 +79,8 @@
 		04B6F928213195DD00639A1B /* NotesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesPresenter.swift; sourceTree = "<group>"; };
 		04B6F92A2131980300639A1B /* NotesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesCollectionViewCell.swift; sourceTree = "<group>"; };
 		04B6F92B2131980300639A1B /* NotesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotesCollectionViewCell.xib; sourceTree = "<group>"; };
+		04B6F93221339F5000639A1B /* UIImage+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Utils.swift"; sourceTree = "<group>"; };
+		04B6F9342133A23100639A1B /* UIColors+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColors+Utils.swift"; sourceTree = "<group>"; };
 		0997CD2E2042E42100D7BDF9 /* CellsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellsViewController.swift; sourceTree = "<group>"; };
 		0997CD302042E58400D7BDF9 /* ChatWithTabBarExamplesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatWithTabBarExamplesViewController.swift; sourceTree = "<group>"; };
 		13A796C853501DB82BA5DC27 /* Pods_ChattoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChattoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -191,6 +195,8 @@
 				C3F91DA81C75EF9E00D461D2 /* DemoChatViewController.swift */,
 				04B6F92121308F3300639A1B /* SirenaChatViewController.swift */,
 				04B6F923213097F900639A1B /* SirenaChatDataSource.swift */,
+				04B6F93221339F5000639A1B /* UIImage+Utils.swift */,
+				04B6F9342133A23100639A1B /* UIColors+Utils.swift */,
 			);
 			path = "Chat View Controllers";
 			sourceTree = "<group>";
@@ -475,6 +481,8 @@
 				04B6F92C2131980300639A1B /* NotesCollectionViewCell.swift in Sources */,
 				55A77B4C1FCC5FFB0040C77E /* BaseMessagesSelector.swift in Sources */,
 				C3F91DC61C75EF9E00D461D2 /* DemoTextMessageViewModel.swift in Sources */,
+				04B6F9352133A23100639A1B /* UIColors+Utils.swift in Sources */,
+				04B6F93321339F5000639A1B /* UIImage+Utils.swift in Sources */,
 				C341D42E1C9635DF00FD3463 /* TimeSeparatorModel.swift in Sources */,
 				C3F91DC01C75EF9E00D461D2 /* DemoPhotoMessageHandler.swift in Sources */,
 				C3F91DBC1C75EF9E00D461D2 /* DemoChatViewController.swift in Sources */,
