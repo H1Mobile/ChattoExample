@@ -12,7 +12,7 @@ import ChattoAdditions
 
 class SirenaChatViewController: BaseChatViewController {
     
-    var chatInputPresenter: BasicChatInputBarPresenter!
+    //var chatInputPresenter: BasicChatInputBarPresenter!
     
     var dataSource: SirenaChatDataSource! {
         didSet {
@@ -28,20 +28,23 @@ class SirenaChatViewController: BaseChatViewController {
     }
     
     override func createChatInputView() -> UIView {
-        let chatInputView = ChatInputBar.loadNib()
-        var appearance = ChatInputBarAppearance()
-        appearance.sendButtonAppearance.title = NSLocalizedString("Send", comment: "")
-        appearance.textInputAppearance.placeholderText = NSLocalizedString("Type a message", comment: "")
-        self.chatInputPresenter = BasicChatInputBarPresenter(chatInputBar: chatInputView, chatInputItems: self.createChatInputItems(), chatInputBarAppearance: appearance)
-        chatInputView.maxCharactersCount = 1000
+//        let chatInputView = ChatInputBar.loadNib()
+//        var appearance = ChatInputBarAppearance()
+//        appearance.sendButtonAppearance.title = NSLocalizedString("Send", comment: "")
+//        appearance.textInputAppearance.placeholderText = NSLocalizedString("Type a message", comment: "")
+//        self.chatInputPresenter = BasicChatInputBarPresenter(chatInputBar: chatInputView, chatInputItems: self.createChatInputItems(), chatInputBarAppearance: appearance)
+//        chatInputView.maxCharactersCount = 1000
+        
+        //let chatInputView = MessageInputBarView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 48))
+        let chatInputView = MessageInputBarView.loadNib()
         return chatInputView
     }
     
     func createChatInputItems() -> [ChatInputItemProtocol] {
         // Por cada tipo de item de input hay que crear una clase que cumple con el protocolo de ChatInputItemProtocol
         var items = [ChatInputItemProtocol]()
-        items.append(self.createTextInputItem())
-        items.append(self.createPhotoInputItem())
+//        items.append(self.createTextInputItem())
+//        items.append(self.createPhotoInputItem())
         return items
     }
     
