@@ -19,27 +19,10 @@ class MessageInputBarView: UIView {
     @IBOutlet weak var plusButton: UIButton!
     @IBOutlet weak var camButton: UIButton!
     @IBOutlet weak var micButton: UIButton!
-    @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var expandableTextView: ExpandableTextView!
     
     
     //MARK: Constructors
-//    required init?(coder aDecoder: NSCoder) {
-//        super.init(coder: aDecoder)
-//        xibSetup()
-//    }
-//    
-//    override init(frame: CGRect) {
-//        super.init(frame: frame)
-//        xibSetup()
-//    }
-//    
-//    func xibSetup() {
-//        view = loadViewFromNib()
-//        view.frame = bounds
-//        addSubview(view)
-//        setupView()
-//    }
-    
     func loadViewFromNib() -> UIView {
         let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: type(of: self).nibName(), bundle: bundle)
@@ -78,9 +61,5 @@ class MessageInputBarView: UIView {
             return nil
         }
     }
-    
-    // MARK: - Private methods
-    fileprivate func setupView() {
-    }
-    
+        
 }

@@ -38,7 +38,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WuT-sv-t7P">
                             <rect key="frame" x="56" y="0.0" width="227" height="48"/>
                             <subviews>
-                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WrD-QV-PlB">
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WrD-QV-PlB" customClass="ExpandableTextView" customModule="ChattoAdditions">
                                     <rect key="frame" x="0.0" y="8" width="227" height="32"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -78,7 +78,7 @@
                     </subviews>
                     <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" priority="999" constant="48" id="74k-4Q-40u"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="67Z-Gr-g6Y"/>
                         <constraint firstAttribute="trailing" secondItem="agj-tR-or0" secondAttribute="trailing" constant="12" id="URK-cw-SXJ"/>
                         <constraint firstAttribute="bottom" secondItem="yb6-ZM-Mz6" secondAttribute="bottom" constant="8" id="gkp-qH-g9I"/>
                         <constraint firstItem="yb6-ZM-Mz6" firstAttribute="leading" secondItem="yOb-lp-EHo" secondAttribute="leading" constant="12" id="h9s-PA-3Me"/>
@@ -100,11 +100,11 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="camButton" destination="oT5-uv-6Pc" id="V9B-A0-EAN"/>
+                <outlet property="expandableTextView" destination="WrD-QV-PlB" id="rjA-JL-0m7"/>
                 <outlet property="leftButtonStackView" destination="yb6-ZM-Mz6" id="EXN-C7-pxM"/>
                 <outlet property="micButton" destination="ZQA-kg-4vv" id="vnO-KR-9KR"/>
                 <outlet property="plusButton" destination="zyR-4o-77Y" id="hhW-64-sem"/>
                 <outlet property="rightButtonsStackView" destination="agj-tR-or0" id="qCE-48-wyZ"/>
-                <outlet property="textView" destination="WrD-QV-PlB" id="fBS-aL-OuJ"/>
                 <outlet property="textViewContainer" destination="WuT-sv-t7P" id="bUs-th-mDK"/>
             </connections>
             <point key="canvasLocation" x="33.5" y="-189"/>
