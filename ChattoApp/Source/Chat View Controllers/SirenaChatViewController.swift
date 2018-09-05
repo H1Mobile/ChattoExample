@@ -13,6 +13,7 @@ import ChattoAdditions
 class SirenaChatViewController: BaseChatViewController {
     
     //var chatInputPresenter: BasicChatInputBarPresenter!
+    var stickyStackView: UIStackView?
     
     var dataSource: SirenaChatDataSource! {
         didSet {
@@ -24,7 +25,7 @@ class SirenaChatViewController: BaseChatViewController {
         super.viewDidLoad()
         
         self.title = "Sirena"
-        
+        prepareView()
     }
     
     override func createChatInputView() -> UIView {
@@ -35,15 +36,16 @@ class SirenaChatViewController: BaseChatViewController {
 //        self.chatInputPresenter = BasicChatInputBarPresenter(chatInputBar: chatInputView, chatInputItems: self.createChatInputItems(), chatInputBarAppearance: appearance)
 //        chatInputView.maxCharactersCount = 1000
         
-        //let chatInputView = MessageInputBarView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 48))
+
         let chatInputView = MessageInputBarView.loadNib()
+        chatInputView.delegate = self
         return chatInputView
     }
     
     func createChatInputItems() -> [ChatInputItemProtocol] {
         // Por cada tipo de item de input hay que crear una clase que cumple con el protocolo de ChatInputItemProtocol
         var items = [ChatInputItemProtocol]()
-//        items.append(self.createTextInputItem())
+        items.append(self.createTextInputItem())
 //        items.append(self.createPhotoInputItem())
         return items
     }
@@ -52,6 +54,7 @@ class SirenaChatViewController: BaseChatViewController {
         let item = TextChatInputItem()
         item.textInputHandler = { [weak self] text in
             // Your handling logic
+            self?.dataSource.addTextMessage(text)
         }
         return item
     }
@@ -64,6 +67,34 @@ class SirenaChatViewController: BaseChatViewController {
         return item
     }
     
+    fileprivate func prepareView() {
+        self.view.backgroundColor = UIColor.init(hexString: "eceff1")
+        navigationItem.titleView = NavProspectView(frame: CGRect(x: 0, y: 0, width: 250, height: 40))
+        navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigationBar.barTintColor = UIColor(hexString: "0097a7")
+        navigationController?.navigationBar.backgroundColor = UIColor(hexString: "0097a7")
+        navigationItem.backBarButtonItem?.tintColor = UIColor.white
+        
+        prepareStickyContainer()
+    }
+    
+    fileprivate func prepareStickyContainer() {
+        stickyStackView = UIStackView(frame: CGRect.zero)
+        stickyStackView?.backgroundColor = UIColor.red
+        stickyStackView?.alignment = .fill
+        stickyStackView?.distribution = .fill
+        stickyStackView?.spacing = 4
+        view.addSubview(stickyStackView!)
+        
+        stickyStackView?.translatesAutoresizingMaskIntoConstraints = false
+        
+
+        stickyStackView?.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
+        stickyStackView?.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
+        stickyStackView?.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
+
+    }
+    
     public typealias ChatItemType = String
     override func createPresenterBuilders() -> [ChatItemType: [ChatItemPresenterBuilderProtocol]] {
         
@@ -73,4 +104,21 @@ class SirenaChatViewController: BaseChatViewController {
             NotesModel.chatItemType: [NotesPresenterBuilder()]
         ]
     }
+}
+
+extension SirenaChatViewController: MessageInputBarViewDelegate {
+    func didTapPlusButton() {
+        var removed = false
+        self.stickyStackView?.arrangedSubviews.forEach({ (subView) in
+            subView.removeFromSuperview()
+            removed = true
+        })
+        if !removed {
+            let reminderStickyView = ReminderStickyView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 36))
+            self.stickyStackView?.addArrangedSubview(reminderStickyView)
+        }
+
+    }
+    
+    
 }

@@ -39,6 +39,9 @@ class ChatExamplesViewController: CellsViewController {
             self.makeSirenaCellItem(),
             self.makeOpenWithTabBarCellItem(),
         ]
+        
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        navigationItem.backBarButtonItem?.tintColor = UIColor.white
     }
     
     // MARK: - Cells

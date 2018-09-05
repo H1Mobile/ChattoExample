@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReminderStickyView" customModule="ChattoApp" customModuleProvider="target">
+            <connections>
+                <outlet property="alarmImage" destination="rtu-wg-gq3" id="3S2-jl-w7a"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="36"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dFo-eW-1YJ">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="36"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="baseline_alarm_black_24pt" translatesAutoresizingMaskIntoConstraints="NO" id="rtu-wg-gq3">
+                            <rect key="frame" x="18" y="10" width="16" height="16"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="16" id="1YR-GZ-Iof"/>
+                                <constraint firstAttribute="height" constant="16" id="1u1-YH-5co"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recordatorio: Jueves 11/6, 13:56hs" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yF4-nx-i0e">
+                            <rect key="frame" x="50" y="10" width="317" height="17"/>
+                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.12941176470588234" green="0.58823529411764708" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="yF4-nx-i0e" firstAttribute="leading" secondItem="rtu-wg-gq3" secondAttribute="trailing" constant="16" id="8mC-ai-ogs"/>
+                        <constraint firstAttribute="height" constant="36" id="QZT-Gi-Kqt"/>
+                        <constraint firstItem="rtu-wg-gq3" firstAttribute="centerY" secondItem="dFo-eW-1YJ" secondAttribute="centerY" id="YsI-QP-8Ka"/>
+                        <constraint firstItem="yF4-nx-i0e" firstAttribute="centerY" secondItem="dFo-eW-1YJ" secondAttribute="centerY" id="eM1-Hh-ylf"/>
+                        <constraint firstItem="rtu-wg-gq3" firstAttribute="leading" secondItem="dFo-eW-1YJ" secondAttribute="leading" constant="18" id="hN6-Ke-Nda"/>
+                        <constraint firstAttribute="trailing" secondItem="yF4-nx-i0e" secondAttribute="trailing" constant="8" id="kc9-5b-Wfk"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="dFo-eW-1YJ" secondAttribute="trailing" id="BCC-iR-9mv"/>
+                <constraint firstItem="dFo-eW-1YJ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="OCr-mV-8RB"/>
+                <constraint firstItem="dFo-eW-1YJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="egh-hW-pUZ"/>
+                <constraint firstAttribute="bottom" secondItem="dFo-eW-1YJ" secondAttribute="bottom" id="sXn-kU-L1B"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="33.5" y="-262"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="baseline_alarm_black_24pt" width="24" height="24"/>
+    </resources>
+</document>

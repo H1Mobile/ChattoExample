@@ -51,4 +51,14 @@ class SirenaChatDataSource: ChatDataSourceProtocol {
         completion(didAdjust)
     }
     
+    
+    // MARK: - Adding components
+    func addTextMessage(_ text: String) {
+        let uid = "\(self.nextMessageId)"
+        self.nextMessageId += 1
+        let message = DemoChatMessageFactory.makeTextMessage(uid, text: text, isIncoming: false)
+        self.slidingWindow.insertItem(message, position: .bottom)
+        self.delegate?.chatDataSourceDidUpdate(self)
+    }
+    
 }

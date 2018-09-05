@@ -29,6 +29,24 @@
                                     </constraints>
                                     <color key="tintColor" red="0.098039215690000001" green="0.77647058820000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <state key="normal" image="round_add_circle_black_36pt"/>
+                                    <connections>
+                                        <action selector="plusButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="Xgf-K1-m8R"/>
+                                    </connections>
+                                </button>
+                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ACG-Qy-L0W">
+                                    <rect key="frame" x="-12" y="0.0" width="32" height="32"/>
+                                    <color key="backgroundColor" red="0.61176470588235299" green="0.15294117647058825" blue="0.69019607843137254" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="32" id="Qp8-aI-JhZ"/>
+                                        <constraint firstAttribute="height" constant="32" id="UFf-sb-tda"/>
+                                    </constraints>
+                                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <state key="normal" image="baseline_textsms_black_18pt"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="16"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
                                 </button>
                             </subviews>
                             <constraints>
@@ -53,10 +71,10 @@
                             </constraints>
                         </view>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="agj-tR-or0">
-                            <rect key="frame" x="295" y="12" width="68" height="24"/>
+                            <rect key="frame" x="295" y="14" width="68" height="22"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oT5-uv-6Pc">
-                                    <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="24" height="22"/>
                                     <constraints>
                                         <constraint firstAttribute="height" priority="999" constant="24" id="7FY-vP-N2A"/>
                                         <constraint firstAttribute="width" priority="999" constant="24" id="xhF-wh-gHF"/>
@@ -65,13 +83,24 @@
                                     <state key="normal" image="baseline_photo_camera_black_24pt"/>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZQA-kg-4vv">
-                                    <rect key="frame" x="44" y="0.0" width="24" height="24"/>
+                                    <rect key="frame" x="44" y="0.0" width="24" height="22"/>
                                     <constraints>
                                         <constraint firstAttribute="width" priority="999" constant="24" id="GsO-XH-Vq9"/>
                                         <constraint firstAttribute="height" priority="999" constant="24" id="xg0-Sy-394"/>
                                     </constraints>
                                     <color key="tintColor" red="0.40000000000000002" green="0.3921568627" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <state key="normal" image="baseline_mic_black_24pt"/>
+                                </button>
+                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NDI-9N-jhU">
+                                    <rect key="frame" x="68" y="0.0" width="25" height="22"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="22" id="bsZ-Dm-Kab"/>
+                                        <constraint firstAttribute="width" constant="25" id="nfO-3C-YdY"/>
+                                    </constraints>
+                                    <state key="normal" image="baseline_send_black_36pt"/>
+                                    <connections>
+                                        <action selector="sendButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="faf-UO-L1S"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>
@@ -102,9 +131,11 @@
                 <outlet property="camButton" destination="oT5-uv-6Pc" id="V9B-A0-EAN"/>
                 <outlet property="expandableTextView" destination="WrD-QV-PlB" id="rjA-JL-0m7"/>
                 <outlet property="leftButtonStackView" destination="yb6-ZM-Mz6" id="EXN-C7-pxM"/>
+                <outlet property="mediumButton" destination="ACG-Qy-L0W" id="Vvm-23-nwq"/>
                 <outlet property="micButton" destination="ZQA-kg-4vv" id="vnO-KR-9KR"/>
                 <outlet property="plusButton" destination="zyR-4o-77Y" id="hhW-64-sem"/>
                 <outlet property="rightButtonsStackView" destination="agj-tR-or0" id="qCE-48-wyZ"/>
+                <outlet property="sendButton" destination="NDI-9N-jhU" id="PlB-dc-ADO"/>
                 <outlet property="textViewContainer" destination="WuT-sv-t7P" id="bUs-th-mDK"/>
             </connections>
             <point key="canvasLocation" x="33.5" y="-189"/>
@@ -113,6 +144,8 @@
     <resources>
         <image name="baseline_mic_black_24pt" width="24" height="24"/>
         <image name="baseline_photo_camera_black_24pt" width="24" height="24"/>
+        <image name="baseline_send_black_36pt" width="36" height="36"/>
+        <image name="baseline_textsms_black_18pt" width="18" height="18"/>
         <image name="round_add_circle_black_36pt" width="36" height="36"/>
     </resources>
 </document>

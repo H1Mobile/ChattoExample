@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		045EA8F32137395200CEF7A5 /* MessageInputBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045EA8F22137395200CEF7A5 /* MessageInputBarView.swift */; };
 		045EA8F52137396A00CEF7A5 /* MessageInputBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 045EA8F42137396A00CEF7A5 /* MessageInputBarView.xib */; };
+		045EA8FB213F149600CEF7A5 /* NavProspectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045EA8FA213F149600CEF7A5 /* NavProspectView.swift */; };
+		045EA8FD213F14B000CEF7A5 /* NavProspectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 045EA8FC213F14B000CEF7A5 /* NavProspectView.xib */; };
+		045EA900213F35F800CEF7A5 /* ReminderStickyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045EA8FF213F35F800CEF7A5 /* ReminderStickyView.swift */; };
+		045EA902213F360600CEF7A5 /* ReminderStickyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 045EA901213F360600CEF7A5 /* ReminderStickyView.xib */; };
 		04B6F92221308F3300639A1B /* SirenaChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B6F92121308F3300639A1B /* SirenaChatViewController.swift */; };
 		04B6F924213097F900639A1B /* SirenaChatDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B6F923213097F900639A1B /* SirenaChatDataSource.swift */; };
 		04B6F9272131957800639A1B /* NotesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B6F9262131957800639A1B /* NotesModel.swift */; };
@@ -77,6 +81,10 @@
 /* Begin PBXFileReference section */
 		045EA8F22137395200CEF7A5 /* MessageInputBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageInputBarView.swift; sourceTree = "<group>"; };
 		045EA8F42137396A00CEF7A5 /* MessageInputBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageInputBarView.xib; sourceTree = "<group>"; };
+		045EA8FA213F149600CEF7A5 /* NavProspectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavProspectView.swift; sourceTree = "<group>"; };
+		045EA8FC213F14B000CEF7A5 /* NavProspectView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NavProspectView.xib; sourceTree = "<group>"; };
+		045EA8FF213F35F800CEF7A5 /* ReminderStickyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderStickyView.swift; sourceTree = "<group>"; };
+		045EA901213F360600CEF7A5 /* ReminderStickyView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReminderStickyView.xib; sourceTree = "<group>"; };
 		04B6F92121308F3300639A1B /* SirenaChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SirenaChatViewController.swift; sourceTree = "<group>"; };
 		04B6F923213097F900639A1B /* SirenaChatDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SirenaChatDataSource.swift; sourceTree = "<group>"; };
 		04B6F9262131957800639A1B /* NotesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesModel.swift; sourceTree = "<group>"; };
@@ -152,6 +160,34 @@
 				045EA8F42137396A00CEF7A5 /* MessageInputBarView.xib */,
 			);
 			path = "Input Bar";
+			sourceTree = "<group>";
+		};
+		045EA8F8213F144D00CEF7A5 /* Nav Bar */ = {
+			isa = PBXGroup;
+			children = (
+				045EA8FA213F149600CEF7A5 /* NavProspectView.swift */,
+				045EA8FC213F14B000CEF7A5 /* NavProspectView.xib */,
+			);
+			path = "Nav Bar";
+			sourceTree = "<group>";
+		};
+		045EA8F9213F145A00CEF7A5 /* Sirena */ = {
+			isa = PBXGroup;
+			children = (
+				045EA8FE213F35CE00CEF7A5 /* ReminderStickyView */,
+				045EA8F8213F144D00CEF7A5 /* Nav Bar */,
+				045EA8EB2137060700CEF7A5 /* Input Bar */,
+			);
+			path = Sirena;
+			sourceTree = "<group>";
+		};
+		045EA8FE213F35CE00CEF7A5 /* ReminderStickyView */ = {
+			isa = PBXGroup;
+			children = (
+				045EA8FF213F35F800CEF7A5 /* ReminderStickyView.swift */,
+				045EA901213F360600CEF7A5 /* ReminderStickyView.xib */,
+			);
+			path = ReminderStickyView;
 			sourceTree = "<group>";
 		};
 		04B6F9252131951400639A1B /* Notes */ = {
@@ -277,7 +313,7 @@
 		C3F91D9F1C75EF9E00D461D2 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				045EA8EB2137060700CEF7A5 /* Input Bar */,
+				045EA8F9213F145A00CEF7A5 /* Sirena */,
 				55A77B501FCC6BEA0040C77E /* Chat View Controllers */,
 				55A77B471FCC41CC0040C77E /* Chat Items */,
 				C3F91DA01C75EF9E00D461D2 /* AppDelegate.swift */,
@@ -375,6 +411,7 @@
 				TargetAttributes = {
 					C33FBFA41BDE441C008E3545 = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = G46HB69X3V;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
@@ -409,6 +446,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				045EA8FD213F14B000CEF7A5 /* NavProspectView.xib in Resources */,
+				045EA902213F360600CEF7A5 /* ReminderStickyView.xib in Resources */,
 				04B6F92D2131980300639A1B /* NotesCollectionViewCell.xib in Resources */,
 				045EA8F52137396A00CEF7A5 /* MessageInputBarView.xib in Resources */,
 				C33FBFB31BDE441C008E3545 /* LaunchScreen.storyboard in Resources */,
@@ -489,6 +528,7 @@
 				FE2D050B1C915ADB006F902B /* BaseMessageCollectionViewCellAvatarStyle.swift in Sources */,
 				C3F91DBF1C75EF9E00D461D2 /* DemoChatMessageSender.swift in Sources */,
 				C3F91DB81C75EF9E00D461D2 /* ChatExamplesViewController.swift in Sources */,
+				045EA8FB213F149600CEF7A5 /* NavProspectView.swift in Sources */,
 				04B6F929213195DD00639A1B /* NotesPresenter.swift in Sources */,
 				C3F91DC41C75EF9E00D461D2 /* DemoTextMessageHandler.swift in Sources */,
 				C3F91DC31C75EF9E00D461D2 /* SlidingDatasSource.swift in Sources */,
@@ -508,6 +548,7 @@
 				C3F91DCE1C75EFE300D461D2 /* SendingStatusPresenter.swift in Sources */,
 				C3F91DC51C75EF9E00D461D2 /* DemoTextMessageModel.swift in Sources */,
 				5587302E1FCD7EE5005BC2EC /* MessagesSelectionChatViewController.swift in Sources */,
+				045EA900213F35F800CEF7A5 /* ReminderStickyView.swift in Sources */,
 				04B6F92221308F3300639A1B /* SirenaChatViewController.swift in Sources */,
 				C3F91DCC1C75EFE300D461D2 /* SendingStatusCollectionViewCell.swift in Sources */,
 				04B6F924213097F900639A1B /* SirenaChatDataSource.swift in Sources */,
@@ -664,7 +705,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = G46HB69X3V;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = ChattoApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
@@ -686,7 +727,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = G46HB69X3V;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = ChattoApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
